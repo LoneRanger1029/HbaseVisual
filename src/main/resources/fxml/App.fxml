@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="812.0" prefWidth="1108.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lyh.app.AppController">
+   <children>
+       <BorderPane fx:id="root" prefHeight="812.0" prefWidth="1108.0">
+          <center>
+             <BorderPane fx:id="appPage" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                <top>
+                   <VBox prefHeight="85.0" prefWidth="1108.0" BorderPane.alignment="CENTER">
+                      <children>
+                         <MenuBar style="-fx-padding: 10px">
+                           <menus>
+                             <Menu fx:id="file" mnemonicParsing="false" text=" 文件 ">
+                               <items>
+                                 <MenuItem fx:id="createConnectItem" mnemonicParsing="false" onAction="#createNewConnection" text="新建连接" />
+                                   <MenuItem fx:id="closeFileItem" mnemonicParsing="false" onAction="#closeFile" text="关闭" />
+                               </items>
+                             </Menu>
+                             <Menu fx:id="visibleControls" mnemonicParsing="false" text=" 查看 ">
+                          </Menu>
+                               <Menu fx:id="tools" mnemonicParsing="false" text="工具">
+                                  <items>
+                                      <MenuItem fx:id="poi_input" mnemonicParsing="false" onAction="#poi_in" text=" 导入excel数据 " />
+                                      <MenuItem fx:id="poi_output" mnemonicParsing="false" onAction="#poi_out" text=" 导出数据到excel " />
+                                  </items>
+                               </Menu>
+                             <Menu mnemonicParsing="false" text=" 帮助 ">
+                               <items>
+                                   <MenuItem fx:id="bug" mnemonicParsing="false" onAction="#openMailPane" text="bug上报" />
+                                   <MenuItem fx:id="blog" mnemonicParsing="false" onAction="#openBlog" text="作者博客地址" />
+                                   <MenuItem fx:id="mail" mnemonicParsing="false" onAction="#sendMail" text="邮件发送" />
+                               </items>
+                             </Menu>
+                           </menus>
+                         </MenuBar>
+                         <JFXToolbar prefHeight="90.0" prefWidth="1108.0">
+                            <center>
+                               <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+                                  <children>
+                                      <JFXButton fx:id="btn_connect" onAction="#openConnectionPane" prefHeight="80.0" prefWidth="80.0" />
+                                      <JFXButton fx:id="search" onAction="#openNormalSearch" prefHeight="80" prefWidth="80.0" />
+                                      <Line endX="-99.99998474121094" endY="36.29289245605469" startX="-99.99996948242188" startY="123.58578491210938" stroke="#c3c2c2" />
+                                      <JFXButton fx:id="filter_search" onAction="#openFilterScanPane" prefHeight="80.0" prefWidth="80.0" />
+                                      <JFXButton fx:id="btn_table" onAction="#openDesignPane" prefHeight="80.0" prefWidth="80.0" />
+                                     <JFXButton fx:id="import_excel" onAction="#openExcelChooser" prefHeight="80.0" prefWidth="80.0" />
+                                     <JFXButton fx:id="export_excel" onAction="#openSavePath" prefHeight="80.0" prefWidth="80.0" />
+                                  </children>
+                                  <padding>
+                                     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                  </padding>
+                               </HBox>
+                            </center>
+                         </JFXToolbar>
+                      </children>
+                   </VBox>
+                </top>
+                <center>
+                   <BorderPane fx:id="codeArea" prefHeight="657.0" prefWidth="660.0" BorderPane.alignment="CENTER">
+       <!--               <top>-->
+       <!--                  <HBox prefHeight="66.0" prefWidth="852.0" spacing="15.0" BorderPane.alignment="CENTER">-->
+       <!--                     <children>-->
+       <!--                        <HBox prefHeight="46.0" prefWidth="150.0">-->
+       <!--                           <children>-->
+       <!--                               <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true" />-->
+       <!--                               <JFXComboBox fx:id="connectName" prefHeight="30.0" prefWidth="116.0" />-->
+       <!--                           </children>-->
+       <!--                        </HBox>-->
+       <!--                        <HBox prefHeight="100.0" prefWidth="200.0">-->
+       <!--                           <children>-->
+       <!--                              <ImageView fitHeight="36.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />-->
+       <!--                              <JFXComboBox fx:id="namespaces" prefHeight="30.0" prefWidth="111.0" />-->
+       <!--                           </children>-->
+       <!--                        </HBox>-->
+       <!--                        <HBox prefHeight="46.0" prefWidth="106.0">-->
+       <!--                           <children>-->
+       <!--                               <JFXButton fx:id="execute" alignment="CENTER" contentDisplay="CENTER" onAction="#executeSQL" prefHeight="59.0" prefWidth="108.0" />-->
+       <!--                           </children>-->
+       <!--                        </HBox>-->
+       <!--                     </children>-->
+       <!--                     <padding>-->
+       <!--                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />-->
+       <!--                     </padding>-->
+       <!--                  </HBox>-->
+       <!--               </top>-->
+<!--                       <center>-->
+<!--                        <TabPane fx:id="terminalTabPane"-->
+<!--                                 prefHeight="550.0"-->
+<!--                                 prefWidth="815.0"-->
+<!--                                 tabClosingPolicy="UNAVAILABLE">-->
+<!--                            <tabs>-->
+<!--                                <Tab fx:id="terminalTab" text="command">-->
+<!--                                    <graphic>-->
+<!--                                        <Label alignment="CENTER" contentDisplay="CENTER" styleClass="terminal-icon"/>-->
+<!--                                    </graphic>-->
+<!--                                    <content>-->
+<!--                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"-->
+<!--                                                    styleClass="terminal-area">-->
+<!--                                            <children>-->
+<!--                                                <MyTextArea fx:id="terminalArea" layoutX="97.0" layoutY="54.0" prefHeight="200.0"-->
+<!--                                                          prefWidth="646.0" styleClass="terminal-area" wrapText="true"-->
+<!--                                                          AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0"-->
+<!--                                                          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0"/>-->
+<!--                                                <TextField fx:id="terminalInput" layoutY="466.0" prefHeight="50.0"-->
+<!--                                                           promptText="write commands here" styleClass="terminal-input"-->
+<!--                                                           AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"-->
+<!--                                                           AnchorPane.rightAnchor="0.0"/>-->
+<!--                                            </children>-->
+<!--                                        </AnchorPane>-->
+<!--                                    </content>-->
+<!--                                </Tab>-->
+<!--                            </tabs>-->
+<!--                        </TabPane>-->
+<!--                    </center>-->
+                       <center>
+                           <ImageView fx:id="background" fitHeight="240.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                       </center>
+                      <bottom>
+                   </bottom>
+                   </BorderPane>
+                </center>
+             </BorderPane>
+          </center>
+          <bottom>
+             <JFXToolbar fx:id="toolbar" prefHeight="20.0" prefWidth="1108.0" style="-fx-background-color: #2d2d2d" BorderPane.alignment="CENTER" />
+          </bottom>
+       </BorderPane>
+   </children>
+</StackPane>

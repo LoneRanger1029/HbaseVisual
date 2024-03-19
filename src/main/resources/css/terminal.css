@@ -1,0 +1,37 @@
+.terminal-icon {
+    -fx-background-image: url("../icon/terminal.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-border-color: transparent;
+    -fx-background-size: 18;
+    -fx-pref-height: 26;
+    -fx-pref-width: 26;
+}
+.terminal-area {
+    -fx-background-color: #2d2d2d;
+    -fx-border-width: 0;
+    -fx-background-insets: 0;
+    -fx-border-radius: 0;
+    -fx-text-fill: #FFF;
+}
+
+.terminal-area .content {
+    -fx-background-color: #2d2d2d;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+
+.terminal-area:focused .content {
+    -fx-background-color: #2d2d2d;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+
+.terminal-input {
+    -fx-background-color: #2d2d2d;
+    -fx-background-insets: 0;
+    -fx-opacity: 0.95;
+    -fx-text-fill: #FFF;
+    -fx-border-color: #FFF;
+    -fx-border-width: 2 0 0 0;
+}

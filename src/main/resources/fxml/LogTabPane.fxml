@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.fxmisc.richtext.CodeArea?>
+<BorderPane fx:id="logTabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.lyh.panes.controller.LogTabPaneController">
+   <top>
+      <Label alignment="CENTER" prefHeight="40.0" prefWidth="76.0" text="运行日志：" BorderPane.alignment="TOP_LEFT" />
+   </top>
+   <center>
+      <CodeArea fx:id="codeArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" />
+   </padding>
+</BorderPane>

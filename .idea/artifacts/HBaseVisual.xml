@@ -1,0 +1,29 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="HBaseVisual">
+    <output-path>$PROJECT_DIR$/out/artifacts/HBaseVisual</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="com.lyh.app.Main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="icons">
+          <JavaFxApplicationIcons>
+            <option name="windowsIcon" value="$PROJECT_DIR$/src/main/resources/icon/hbase.ico" />
+          </JavaFxApplicationIcons>
+        </option>
+        <option name="nativeBundle" value="all" />
+        <option name="title" value="HBaseVisual" />
+        <option name="vendor" value="lyh" />
+        <option name="version" value="1.0" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="HBaseViz.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/src/main/java/com/lyh/app/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="HBaseViz" />
+      </element>
+    </root>
+  </artifact>
+</component>

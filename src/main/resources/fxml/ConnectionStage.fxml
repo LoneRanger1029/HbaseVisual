@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lyh.panes.controller.ConnectionStageController">
+   <children>
+      <AnchorPane fx:id="connectionPane" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <GridPane layoutX="75.0" layoutY="149.0" prefHeight="153.0" prefWidth="463.0">
+               <children>
+                  <Label prefHeight="37.0" prefWidth="85.0" text=" 连接名 ：" GridPane.columnIndex="1" />
+                  <Label prefHeight="30.0" prefWidth="74.0" text="  主 机：" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label prefHeight="32.0" prefWidth="78.0" text="  端 口：" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXTextField fx:id="connect_name" GridPane.columnIndex="2" />
+                  <JFXTextField fx:id="connect_port" prefHeight="35.0" prefWidth="336.0" promptText="   2181（default）" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <JFXTextField fx:id="connect_hosts" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="10.0" prefWidth="127.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="336.0" minWidth="10.0" prefWidth="336.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="82.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="60.0" minHeight="9.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <JFXButton fx:id="testConnect_btn" layoutX="24.0" layoutY="356.0" onAction="#test_connect" prefHeight="30.0" prefWidth="90.0" style="-fx-font-size:14px;-fx-background-color:#CCCCFF;" text="测试连接" />
+            <JFXButton fx:id="confirm_btn" layoutX="365.0" layoutY="356.0" onAction="#confirmConnect" prefHeight="30.0" prefWidth="90.0" style="-fx-font-size:14px;-fx-background-color:#CCCCFF;" text="确定" />
+            <JFXButton fx:id="cancel_btn" layoutX="497.0" layoutY="356.0" onAction="#cancel" prefHeight="30.0" prefWidth="90.0" style="-fx-font-size:14px;-fx-background-color:#CCCCFF;" text="取消" />
+            <ImageView fitHeight="125.0" fitWidth="125.0" layoutX="237.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/icon/Hbase.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="40.0" layoutY="146.0" prefHeight="1.0" prefWidth="528.0" />
+            <Separator layoutX="1.0" layoutY="330.0" prefHeight="3.0" prefWidth="600.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

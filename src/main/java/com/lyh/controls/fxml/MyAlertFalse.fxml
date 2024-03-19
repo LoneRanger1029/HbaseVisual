@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="300" maxWidth="400" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.lyh.controls.controller.MyAlertFalseController">
+   <children>
+      <VBox prefWidth="400" style="-fx-padding:10;">
+         <children>
+            <HBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label prefHeight="23.0" prefWidth="400" style="-fx-font-size:16px;-fx-text-fill:Black;" text="连接状态" textAlignment="CENTER" />
+                  <ImageView fx:id="iv_dialog_close" fitHeight="20" fitWidth="20" onMouseClicked="#dialogClose">
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefWidth="400" style="-fx-padding:10 20 10 20;">
+               <children>
+                  <ImageView fx:id="falseIcon" fitHeight="71.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true">
+                  </ImageView>
+         
+                  <Label prefHeight="23.0" style="-fx-padding:10 0 10 20;-fx-font-size:16px;-fx-text-fill:#555;" text="连接失败" textAlignment="CENTER" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" style="-fx-padding:10 20 10 20;" VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXButton fx:id="btn_dialog_sure" buttonType="RAISED" onMouseClicked="#dialogSure" prefHeight="35" prefWidth="100" style="-fx-font-size:14px;-fx-background-color:#CCCCFF;" text=" 确 认" HBox.hgrow="ALWAYS" VBox.vgrow="NEVER" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>

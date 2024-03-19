@@ -1,0 +1,11 @@
+.info{
+    -fx-fill: #27ba0e;
+}
+
+.error{
+    -fx-fill: #f60606;
+}
+
+.warn {
+    -fx-fill: #fc9803;
+}

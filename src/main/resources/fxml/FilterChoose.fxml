@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="filterChoosePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lyh.panes.controller.FilterChooseController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <JFXButton fx:id="rowFilter" prefHeight="103.0" prefWidth="156.0" onAction="#openRowFilerPane" />
+      <JFXButton fx:id="prefixFilter" prefHeight="103.0" prefWidth="156.0" GridPane.rowIndex="1" onAction="#openPrefixFilter" />
+      <JFXButton fx:id="firstKeyOnlyFilter" prefHeight="103.0" prefWidth="156.0" GridPane.rowIndex="2" onAction="#openFirstKeyOnlyFilter" />
+      <JFXButton fx:id="valueFilter" prefHeight="103.0" prefWidth="156.0" GridPane.rowIndex="3" onAction="#openValueFilter" />
+      <JFXButton fx:id="keyOnlyFilter" prefHeight="103.0" prefWidth="156.0" GridPane.columnIndex="1" onAction="#openKeyOnlyFilter" />
+      <JFXButton fx:id="randomRowFilter" prefHeight="103.0" prefWidth="156.0" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#openRandomRowFilter"/>
+      <JFXButton fx:id="inclusiveStopFilter" prefHeight="103.0" prefWidth="156.0" GridPane.columnIndex="1" GridPane.rowIndex="2" onAction="#openInclusiveStopFilter"/>
+      <JFXButton fx:id="columnPrefixFilter" prefHeight="103.0" prefWidth="156.0" GridPane.columnIndex="1" GridPane.rowIndex="3" onAction="#openColumnPrefixFilter" />
+      <JFXButton fx:id="columnCountGetFilter" prefHeight="103.0" prefWidth="156.0" GridPane.columnIndex="2" onAction="#openColumnCountGetFilter" />
+      <JFXButton fx:id="singleColumnValueFilter" prefHeight="103.0" prefWidth="156.0" GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#openSingleColumnValueFilter" />
+      <JFXButton fx:id="singleColumnValueExcludeFilter" prefHeight="103.0" prefWidth="156.0" GridPane.columnIndex="2" GridPane.rowIndex="2" onAction="#openSingleColumnValueExcludeFilter"/>
+      <JFXButton fx:id="skipFilter" prefHeight="103.0" prefWidth="156.0" GridPane.columnIndex="2" GridPane.rowIndex="3" onAction="#openSkipFilter" />
+      <JFXButton fx:id="whileMatchFilter" prefHeight="103.0" prefWidth="156.0" GridPane.columnIndex="3" onAction="#openWhileMatchFilter" />
+      <JFXButton fx:id="filterList" prefHeight="103.0" prefWidth="156.0" GridPane.columnIndex="3" GridPane.rowIndex="1" onAction="#openFilterList" />
+      <JFXButton fx:id="rowFilter13" prefHeight="103.0" prefWidth="156.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <JFXButton fx:id="rowFilter14" prefHeight="103.0" prefWidth="156.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+   </children>
+</GridPane>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="filterPane" prefHeight="493.0" prefWidth="864.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lyh.panes.controller.FilterPaneFactory">
+    <top>
+        <HBox fx:id="hb_top" prefHeight="100.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox fx:id="vb_namespace" alignment="CENTER" prefHeight="65.0" prefWidth="164.0" spacing="10.0">
+                    <children>
+                        <Label text="namespace" />
+                        <ComboBox fx:id="namespaces" onAction="#chooseTable" prefHeight="30.0" prefWidth="126.0" />
+                    </children>
+                </VBox>
+                <VBox fx:id="vb_table" alignment="CENTER" prefHeight="65.0" prefWidth="164.0" spacing="10.0">
+                    <children>
+                        <Label text="tableName" />
+                        <ComboBox fx:id="tables" prefWidth="150.0" />
+                    </children>
+                </VBox>
+                <VBox prefHeight="65.0" prefWidth="162.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="65.0" prefWidth="164.0" spacing="10.0">
+                     <children>
+                        <Label text="比较运算符" />
+                        <ComboBox fx:id="operatorComboBox" onAction="#chooseOperator" prefWidth="150.0" />
+                     </children>
+                  </VBox>
+               </children></VBox>
+            <VBox alignment="CENTER" prefHeight="65.0" prefWidth="164.0" spacing="10.0">
+               <children>
+                  <Label text="比较器" />
+                  <ComboBox fx:id="comparatorComboBox" onAction="#chooseComparator" prefWidth="150.0" />
+               </children>
+            </VBox>
+            <VBox fx:id="paramsVb" alignment="CENTER" prefHeight="65.0" prefWidth="164.0" spacing="10.0">
+               <children>
+                  <Label text="参数" fx:id="paramName"/>
+                  <TextField fx:id="paramTextField"/>
+               </children>
+            </VBox>
+                <VBox alignment="CENTER" prefHeight="65.0" prefWidth="134.0">
+                    <children>
+                        <JFXRadioButton fx:id="allVersions" prefHeight="20.0" prefWidth="88.0" text="全部版本">
+                            <VBox.margin>
+                                <Insets top="25.0" />
+                            </VBox.margin></JFXRadioButton>
+                    </children>
+                </VBox>
+                <VBox prefHeight="65.0" prefWidth="101.0">
+                    <children>
+                        <JFXButton fx:id="search" onAction="#scan_filter" prefHeight="65.0" prefWidth="83.0" text="搜 索">
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin></JFXButton>
+                    </children></VBox>
+            </children>
+            <padding>
+                <Insets bottom="15.0" left="20.0" right="10.0" top="20.0" />
+            </padding>
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="table_area" prefHeight="438.0" prefWidth="864.0" BorderPane.alignment="CENTER" />
+    </center>
+</BorderPane>

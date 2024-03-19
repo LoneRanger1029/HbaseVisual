@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.shape.Line?>
+<?import com.jfoenix.controls.JFXButton?>
+
+<AnchorPane fx:id="exportPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.lyh.panes.controller.ExportPaneController">
+    <children>
+        <ImageView fitHeight="124.0" fitWidth="124.0" layoutX="99.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@/icon/Hbase.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="124.0" fitWidth="124.0" layoutX="403.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@/icon/excel.png" />
+            </image>
+        </ImageView>
+        <Line endX="70.0" layoutX="320.0" layoutY="110.0" startX="-100.0" />
+        <ComboBox fx:id="namespaces" layoutX="66.0" layoutY="245.0" onAction="#chooseTable" prefHeight="30.0" prefWidth="139.0" />
+        <ComboBox fx:id="tables" layoutX="250.0" layoutY="245.0" prefHeight="30.0" prefWidth="139.0" />
+        <Label alignment="CENTER" layoutX="66.0" layoutY="197.0" prefHeight="30.0" prefWidth="118.0" text="namespace" />
+        <Label alignment="CENTER" layoutX="250.0" layoutY="197.0" prefHeight="30.0" prefWidth="118.0" text="table" />
+        <JFXButton layoutX="319.0" layoutY="347.0" onAction="#export_to_excel" prefHeight="37.0" prefWidth="110.0" text="Export" />
+        <JFXButton layoutX="456.0" layoutY="347.0" onAction="#cancel" prefHeight="37.0" prefWidth="118.0" text="cancel" />
+        <Separator layoutX="29.0" layoutY="187.0" prefHeight="1.0" prefWidth="535.0" />
+      <Label alignment="CENTER" layoutX="416.0" layoutY="197.0" prefHeight="30.0" prefWidth="118.0" text="excel-version" />
+      <ComboBox fx:id="excel" layoutX="423.0" layoutY="245.0" prefHeight="30.0" prefWidth="118.0" />
+    </children>
+</AnchorPane>

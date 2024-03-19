@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="createPane" prefHeight="428.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lyh.panes.controller.CreateNewTableController">
+   <children>
+      <Label alignment="CENTER" layoutX="25.0" layoutY="14.0" prefHeight="38.0" prefWidth="105.0" text="namespace:" />
+      <ComboBox fx:id="namespaces" layoutX="157.0" layoutY="18.0" prefWidth="150.0" />
+      <Separator layoutX="25.0" layoutY="67.0" prefHeight="0.0" prefWidth="528.0" />
+      <Label alignment="CENTER" layoutX="25.0" layoutY="76.0" prefHeight="38.0" prefWidth="105.0" text="tableName:" />
+      <TextField fx:id="tableName" layoutX="157.0" layoutY="80.0" prefHeight="30.0" prefWidth="150.0" />
+      <ScrollPane layoutX="14.0" layoutY="128.0" prefHeight="248.0" prefWidth="553.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="236.0" prefWidth="550.0">
+               <children>
+                  <VBox fx:id="cf_list" layoutX="14.0" layoutY="57.0" prefHeight="174.0" prefWidth="528.0" spacing="5.0">
+                     <padding>
+                        <Insets left="10.0" top="5.0" />
+                     </padding>
+                  </VBox>
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="38.0" prefWidth="129.0" text="columnFamily" />
+                  <Label alignment="CENTER" layoutX="202.0" layoutY="14.0" prefHeight="38.0" prefWidth="129.0" text="version" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <JFXButton fx:id="add_cf" layoutX="330.0" layoutY="84.0" onAction="#add" prefHeight="30.0" prefWidth="51.0" />
+      <JFXButton fx:id="remove_cf" layoutX="389.0" layoutY="84.0" onAction="#sub" prefHeight="30.0" prefWidth="51.0" />
+      <JFXButton fx:id="sure" layoutX="374.0" layoutY="384.0" onAction="#create" prefHeight="38.0" prefWidth="82.0" style="-fx-font-size:14px;-fx-background-color:#CCCCFF;" text="确 认" />
+      <JFXButton fx:id="cancel" layoutX="471.0" layoutY="384.0" onAction="#close" prefHeight="38.0" prefWidth="82.0" style="-fx-font-size:14px;-fx-background-color:#CCCCFF;" text="取消" />
+   </children>
+</AnchorPane>

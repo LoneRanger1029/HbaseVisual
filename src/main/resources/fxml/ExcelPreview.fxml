@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lyh.panes.controller.ExcelPreviewController">
+   <center>
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <HBox prefHeight="49.0" prefWidth="600.0" spacing="75.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="53.0" prefWidth="111.0" text="文件名：" />
+            <Label fx:id="fileName" alignment="CENTER" prefHeight="49.0" prefWidth="235.0" />
+            <JFXButton onAction="#preview" prefHeight="57.0" prefWidth="104.0" text="点击预览" />
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </HBox>
+   </top>
+   <bottom>
+      <JFXButton onAction="#openImportPane" prefHeight="30.0" prefWidth="125.0" text="导入 HBase" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

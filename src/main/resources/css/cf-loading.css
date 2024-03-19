@@ -1,0 +1,10 @@
+.message{
+    -fx-text-fill: -cf-primary-color;
+    -fx-font-size: 14px;
+}
+.back-arc{
+    -fx-stroke: derive(-cf-primary-color,90%);
+}
+.front-arc{
+    -fx-stroke: -cf-primary-color;
+}
