@@ -1,3 +1,7 @@
+## 更新日志
+- 2024-4-7 增加Shell命令行支持
+![image](https://github.com/LoneRanger1029/HbaseVisual/assets/107778802/4325918b-c76b-4c55-aca6-fd9308090c59)
+
 # HbaseVisual
 HbaseVisual 1.0 版本
 简单说，目前市面上并没有（或者很少，比如web端的Hue）Hbase的可视化编程工具，桌面领域的工具更是少之又少，我的理解是HBase的API 只支持Java、Python等部分语言，而对于桌面开发端语言C++、C#等并不支持（尽管可以通过一些跨语言接口比如Thrift、Rest，但是这样效率太低了），而Java桌面开发的技术人员在国内更是少之又少（只有少部分的爱好者，但是不乏很多大佬），所以不只是HBase，很多大数据框架的桌面应用开发都可以通过Java来实现。这一点，prettyZoo就是很好的证明(https://github.com/vran-dev/PrettyZoo)。此外，我们熟悉的 JetBrain 全家桶不都是Java开发出来的嘛。
